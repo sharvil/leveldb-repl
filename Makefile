@@ -14,7 +14,7 @@ clean:
 	rm -fr deps $(TARGET)
 
 deps/lib/libleveldb.a: deps/leveldb deps/lib
-	make -C deps/leveldb && mv deps/leveldb/libleveldb.a deps/lib/
+	make -C deps/leveldb && mv deps/leveldb/out-static/libleveldb.a deps/lib/
 
 deps/lib/liblinenoise.a: deps/linenoise deps/lib
 	$(CC) -c deps/linenoise/linenoise.c -o deps/linenoise/linenoise.o
